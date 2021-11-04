@@ -46,3 +46,23 @@ for (index = 0; index < 30; index++)                        //Определен
     if(A[index] > 8) Console.Write(A[index] + " ");         //если число больше 8, то выводим его на печать
     
 Console.WriteLine();
+
+//Элементы, не нарушающие порядок знакочередования
+
+Console.WriteLine("Элементы, не нарушающие знакочередования: ");
+Console.Write(A[0] + " ");                  //выводит первый элемент массива
+int num2 = A[0];                             //присваивает первый текущий элемент
+index = 1;                                  
+for (index = 0; index < 30; index++)        //цикл (начинает с нулевого элемента, выполняет пока индекс меньше 30,поочередный просмотр элементов)
+
+ if (num2 > 0 && A[index] < 0)
+    {           
+        num2 = A[index];                     
+        Console.Write(num2 + " ");           
+    }
+ else if (num2 < 0 && A[index] > 0)                                   
+    {    
+    num2 = A[index];             
+    Console.Write(num2 + " ");   
+    }        
+Console.WriteLine();
